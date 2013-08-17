@@ -1,0 +1,17 @@
+id: RebuildParentIndex
+name: RebuildParentIndex
+key: rebuildparentindex
+author_name: okayama
+author_link: http://weeeblog.net/
+description: <__trans phrase='_PLUGIN_DESCRIPTION'>
+version: 1.1
+l10n_class: RebuildParentIndex::L10N
+blog_config_template: rebuildparentindex_config_blog.tmpl
+settings:
+    only_pulish_status:
+        defalut: 0
+callbacks:
+    cms_post_save.entry: $rebuildparentindex::RebuildParentIndex::Callbacks::_cb_cms_post_save_entry
+    cms_post_save.page: $rebuildparentindex::RebuildParentIndex::Callbacks::_cb_cms_post_save_entry
+    api_post_save.entry: $rebuildparentindex::RebuildParentIndex::Callbacks::_cb_cms_post_save_entry
+    api_post_save.page: $rebuildparentindex::RebuildParentIndex::Callbacks::_cb_cms_post_save_entry
