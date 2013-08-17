@@ -7,7 +7,6 @@ sub _cb_cms_post_save_entry {
 	my ( $eh, $app, $obj, $original ) = @_;
 	my $plugin = MT->component( 'RebuildParentIndex' );
 	if ( $plugin->get_config_value( 'only_pulish_status', 'blog:' . $obj->blog_id ) ) {
-MT->log( 'test' );
 	    return 1 unless $obj->status eq MT::Entry::RELEASE();
 	}
 	if ( my $blog = $obj->blog ) {

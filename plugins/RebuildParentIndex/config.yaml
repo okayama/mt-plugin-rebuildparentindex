@@ -15,3 +15,5 @@ callbacks:
     cms_post_save.page: $rebuildparentindex::RebuildParentIndex::Callbacks::_cb_cms_post_save_entry
     api_post_save.entry: $rebuildparentindex::RebuildParentIndex::Callbacks::_cb_cms_post_save_entry
     api_post_save.page: $rebuildparentindex::RebuildParentIndex::Callbacks::_cb_cms_post_save_entry
+    cms_post_delete.entry: $rebuildparentindex::RebuildParentIndex::Callbacks::_cb_cms_post_save_entry
+    cms_post_delete.page: $rebuildparentindex::RebuildParentIndex::Callbacks::_cb_cms_post_save_entry
